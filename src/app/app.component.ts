@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.sass'
 })
 export class AppComponent {
-  title = 'portfolio-pessoal';
+  title = 'IT'S RUNNING MY FUCKING PORTFOLIO';
 }
