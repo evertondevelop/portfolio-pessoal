@@ -1,0 +1,25 @@
+<nav class="bg-gray-900 text-white">
+  <div class="container mx-auto flex items-center justify-between py-4 px-6">
+    <div class="text-lg font-bold">Meu Portfólio</div>
+    <div class="hidden md:flex space-x-6">
+      <a href="#sobre" class="hover:text-gray-400">Sobre</a>
+      <a href="#projetos" class="hover:text-gray-400">Projetos</a>
+      <a href="#contato" class="hover:text-gray-400">Contato</a>
+    </div>
+    <button class="md:hidden p-2 rounded-md hover:bg-gray-700" (click)="toggleMobileMenu()">
+      <svg *ngIf="!isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg *ngIf="isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <div *ngIf="isMobileMenuOpen" class="md:hidden bg-gray-800">
+    <a href="#sobre" class="block px-4 py-2 hover:bg-gray-700">Sobre</a>
+    <a href="#projetos" class="block px-4 py-2 hover:bg-gray-700">Projetos</a>
+    <a href="#contato" class="block px-4 py-2 hover:bg-gray-700">Contato</a>
+  </div>
+</nav>

@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*
+ * PERFORMANCE TIP: Use Tailwind utility classes in templates always that possible.
+ * Keep this file for global resets, animations, and rare customizations only.
+ * Tailwind's purge/content (see tailwind.config.js) will remove unused classes in production.
+ */
+
+body {
+  @apply min-h-screen bg-gradient-to-br from-zinc-900 via-gray-800 to-zinc-800;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Use only if not possible with Tailwind animate utilities */
+.fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+
+/* .btn-animate: Use Tailwind's transition/scale/bg utilities if possible. Keep only if used and not replaceable. */
+.btn-animate {
+  transition: transform 0.2s;
+}
+.btn-animate:hover {
+  transform: scale(1.05);
+  background: #52525b;
+}
+
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Use Tailwind's animate-none/animate-spin/etc. for most animations. Keep this only for custom marquee. */
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+}
+
+.animate-marquee-paused {
+  animation-play-state: paused !important;
+}
+
+/* Prefer Tailwind's min-w-[140px] utility in templates. Keep here only if used in global selectors. */
+.min-w-\[140px\] {
+  min-width: 140px;
+}
