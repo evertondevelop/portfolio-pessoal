@@ -6,14 +6,16 @@
         Contato
       </h2>
       <form class="space-y-6">
-        <div class="flex gap-4">
-          <input type="text" placeholder="Seu nome" class="w-1/2 p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all" />
-          <input type="email" placeholder="Seu e-mail" class="w-1/2 p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all" />
+        <div class="flex gap-4 flex-col sm:flex-row">
+          <input type="text" placeholder="Seu nome" class="p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all w-full sm:w-1/2" />
+          <input type="email" placeholder="Seu e-mail" class="p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all w-full sm:w-1/2" />
         </div>
         <textarea placeholder="Sua mensagem" rows="4" class="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all"></textarea>
         <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-zinc-700 hover:from-zinc-700 hover:to-primary text-white font-bold text-lg btn-animate shadow-lg transition-all flex items-center justify-center gap-2">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954 8.955c.44.439 1.152.439 1.591 0L21.75 12M12 3v17.25"/></svg>
-          Enviar Mensagem
+          <span class="flex items-center gap-2 w-full justify-center">
+            <svg class="w-6 h-6 m-0 p-0 align-middle" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954 8.955c.44.439 1.152.439 1.591 0L21.75 12M12 3v17.25"/></svg>
+            <span class="align-middle">Enviar Mensagem</span>
+          </span>
         </button>
       </form>
       <div class="flex justify-center gap-6 mt-8">

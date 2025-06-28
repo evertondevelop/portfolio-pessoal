@@ -13,6 +13,28 @@
   background: #23232b;
 }
 
+
+/* Ajuste de altura do chatbot para telas maiores */
+.chatbot-box {
+  min-height: 340px;
+  height: 70vh;
+  max-height: 90vh;
+}
+
+@media (max-width: 640px) {
+  .custom-scroll {
+    scrollbar-width: none;
+  }
+  .custom-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .chatbot-box {
+    min-height: 340px;
+    height: 60vh;
+    max-height: 80vh;
+  }
+}
+
 .bg-primary {
   background: linear-gradient(90deg, var(--orange-red), var(--vivid-pink), var(--electric-violet));
 }
