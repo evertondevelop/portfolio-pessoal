@@ -1,0 +1,14 @@
+
+/* Responsividade para inputs do formulário de contato */
+form .flex {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  form .flex {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+

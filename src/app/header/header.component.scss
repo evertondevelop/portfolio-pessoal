@@ -1,0 +1,20 @@
+nav {
+  .container {
+    max-width: 1200px;
+  }
+
+  a {
+    transition: color 0.3s ease;
+  }
+
+  button {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .bg-gray-800 {
+    padding: 10px;
+  }
+}
