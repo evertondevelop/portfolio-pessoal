@@ -7,10 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./chatbot.component.scss']
 })
 export class ChatbotComponent {
+  private readonly mainlyBotMessage = `
+    Olá, tudo bem? Eu sou o chatbot do Weverton e em breve estarei disponível para ajudar você a encontrar informações sobre suas experiências em projetos e habilidades técnicas.
+  `;
+  private readonly responseBotMessage = `
+    Obrigado por interagir comigo. Assim que eu estiver pronto, poderei responder às suas perguntas e fornecer informações úteis.`;
+
   messages = [
-    { from: 'bot', text: 'Olá! Como posso ajudar você hoje?', date: new Date() },
-    { from: 'user', text: 'Quero saber mais sobre seu portfólio.', date: new Date() },
-    { from: 'bot', text: 'Claro! Posso te mostrar meus projetos, stacks ou formas de contato. O que deseja?', date: new Date() }
+    { from: 'bot', text: this.mainlyBotMessage, date: new Date() },
   ];
   userInput = '';
 
@@ -29,7 +33,7 @@ export class ChatbotComponent {
       this.messages.push({ from: 'user', text: this.userInput, date: new Date() });
       this.scrollToBottom();
       setTimeout(() => {
-        this.messages.push({ from: 'bot', text: 'Mensagem recebida! (Apenas layout)', date: new Date() });
+        this.messages.push({ from: 'bot', text: this.responseBotMessage, date: new Date() });
         this.scrollToBottom();
       }, 600);
       this.userInput = '';

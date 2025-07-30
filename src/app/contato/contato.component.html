@@ -1,32 +1,63 @@
 <section id="contato" class="py-20 bg-gradient-to-br from-zinc-900 via-gray-800 to-zinc-800 text-zinc-100 fade-in-up">
   <div class="max-w-2xl mx-auto px-4">
-    <div class="bg-gradient-to-br from-zinc-800 via-gray-900 to-zinc-700 rounded-3xl shadow-2xl p-10 md:p-14 border border-zinc-700">
+    <div
+      class="bg-gradient-to-br from-zinc-800 via-gray-900 to-zinc-700 rounded-3xl shadow-2xl p-10 md:p-14 border border-zinc-700">
       <h2 class="text-3xl font-bold mb-8 text-center text-zinc-100 flex items-center justify-center gap-2">
-        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25V6.75A2.25 2.25 0 0 0 18.75 4.5H5.25A2.25 2.25 0 0 0 3 6.75v10.5A2.25 2.25 0 0 0 5.25 19.5h13.5A2.25 2.25 0 0 0 21 17.25v-1.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 12 13.5l-5.25-5.25"/></svg>
+        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21 8.25V6.75A2.25 2.25 0 0 0 18.75 4.5H5.25A2.25 2.25 0 0 0 3 6.75v10.5A2.25 2.25 0 0 0 5.25 19.5h13.5A2.25 2.25 0 0 0 21 17.25v-1.5" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 12 13.5l-5.25-5.25" />
+        </svg>
         Contato
       </h2>
       <form class="space-y-6">
         <div class="flex gap-4 flex-col sm:flex-row">
-          <input type="text" placeholder="Seu nome" class="p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all w-full sm:w-1/2" />
-          <input type="email" placeholder="Seu e-mail" class="p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all w-full sm:w-1/2" />
+          <input type="text" placeholder="Seu nome"
+            class="p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all w-full sm:w-1/2" />
+          <input type="email" placeholder="Seu e-mail"
+            class="p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all w-full sm:w-1/2" />
         </div>
-        <textarea placeholder="Sua mensagem" rows="4" class="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all"></textarea>
-        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-zinc-700 hover:from-zinc-700 hover:to-primary text-white font-bold text-lg btn-animate shadow-lg transition-all flex items-center justify-center gap-2">
+        <textarea placeholder="Sua mensagem" rows="4"
+          class="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 focus:outline-none focus:border-primary shadow focus:shadow-lg transition-all"></textarea>
+        <button type="submit"
+          class="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-zinc-700 hover:from-zinc-700 hover:to-primary text-white font-bold text-lg btn-animate shadow-lg transition-all flex items-center justify-center gap-2">
           <span class="flex items-center gap-2 w-full justify-center">
-            <svg class="w-6 h-6 m-0 p-0 align-middle" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954 8.955c.44.439 1.152.439 1.591 0L21.75 12M12 3v17.25"/></svg>
+            <svg class="w-6 h-6 m-0 p-0 align-middle" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12l8.954 8.955c.44.439 1.152.439 1.591 0L21.75 12M12 3v17.25" />
+            </svg>
             <span class="align-middle">Enviar Mensagem</span>
           </span>
         </button>
       </form>
       <div class="flex justify-center gap-6 mt-8">
         @for (link of contatoLinks; track link.href) {
-          <a [href]="link.href" [target]="link.target" [class]="link.class" [title]="link.title">
-            <ng-container [ngSwitch]="link.icon">
-              <svg *ngSwitchCase="'email'" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20V8.99l8 6.99 8-6.99V20H4z"/></svg>
-              <svg *ngSwitchCase="'whatsapp'" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A12.07 12.07 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A12.07 12.07 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.21-1.25-6.23-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.22-1.44l-.37-.22-3.69.97.99-3.59-.24-.37A9.94 9.94 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.54-.01-.19 0-.5.07-.76.34-.26.27-1 1-.97 2.43.03 1.43 1.04 2.81 1.19 3 .15.19 2.05 3.13 5.01 4.27.7.3 1.25.48 1.68.61.71.23 1.36.2 1.87.12.57-.09 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/></svg>
-              <svg *ngSwitchCase="'github'" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.08.79 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
-            </ng-container>
-          </a>
+        <a [href]="link.href" [target]="link.target" [class]="link.class" [title]="link.title">
+          <ng-container [ngSwitch]="link.icon">
+            <svg *ngSwitchCase="'email'" class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20V8.99l8 6.99 8-6.99V20H4z" />
+            </svg>
+            <svg *ngSwitchCase="'whatsapp'" class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.52 3.48A12.07 12.07 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.22-1.63A12.07 12.07 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.21-1.25-6.23-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.22-1.44l-.37-.22-3.69.97.99-3.59-.24-.37A9.94 9.94 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.54-.01-.19 0-.5.07-.76.34-.26.27-1 1-.97 2.43.03 1.43 1.04 2.81 1.19 3 .15.19 2.05 3.13 5.01 4.27.7.3 1.25.48 1.68.61.71.23 1.36.2 1.87.12.57-.09 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z" />
+            </svg>
+            <svg *ngSwitchCase="'linkedin'" class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 256 256">
+              <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                <path
+                  d="M 1.48 29.91 h 18.657 v 60.01 H 1.48 V 29.91 z M 10.809 0.08 c 5.963 0 10.809 4.846 10.809 10.819 c 0 5.967 -4.846 10.813 -10.809 10.813 C 4.832 21.712 0 16.866 0 10.899 C 0 4.926 4.832 0.08 10.809 0.08"
+                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #D4D4D8; fill-rule: nonzero; opacity: 1;"
+                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                <path
+                  d="M 31.835 29.91 h 17.89 v 8.206 h 0.255 c 2.49 -4.72 8.576 -9.692 17.647 -9.692 C 86.514 28.424 90 40.849 90 57.007 V 89.92 H 71.357 V 60.737 c 0 -6.961 -0.121 -15.912 -9.692 -15.912 c -9.706 0 -11.187 7.587 -11.187 15.412 V 89.92 H 31.835 V 29.91 z"
+                  style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #D4D4D8; fill-rule: nonzero; opacity: 1;"
+                  transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              </g>
+            </svg>
+          </ng-container>
+        </a>
         }
       </div>
     </div>

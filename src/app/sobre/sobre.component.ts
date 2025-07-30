@@ -23,7 +23,7 @@ export class SobreComponent {
   }
 
   private startTypedName() {
-    const name = "Weverton";
+    const name = "Weverton Ferreira";
     let current = '';
     let i = 0;
     const type = () => {

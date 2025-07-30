@@ -11,10 +11,10 @@
             <div>
               <h3 class="text-lg md:text-2xl font-semibold mb-2 text-zinc-100 group-hover:text-primary transition-colors duration-300">{{ projeto.titulo }}</h3>
               <p class="text-xs md:text-sm mb-2 text-zinc-400">Stack: <span class="font-semibold text-zinc-200">{{ projeto.stack }}</span></p>
-              <p class="text-xs md:text-base mb-2">Desafio: <span class="text-zinc-300">{{ projeto.descricao }}</span></p>
-              <p class="text-xs md:text-base mb-4">Solução: <span class="text-zinc-300">{{ projeto.solucao }}</span></p>
+              <p class="text-xs md:text-base mb-2"><b>Desafio</b>: <span class="text-zinc-300">{{ projeto.descricao }}</span></p>
+              <p class="text-xs md:text-base mb-4"><b>Solução</b>: <span class="text-zinc-300">{{ projeto.solucao }}</span></p>
             </div>
-            <a [href]="projeto.link" target="_blank"
+            <!-- <a [href]="projeto.link" target="_blank"
                class="mt-2 px-6 py-2 rounded-lg font-semibold btn-animate shadow-lg transition-all duration-300
                       bg-gradient-to-r from-primary to-cyan-500 text-white flex items-center gap-2
                       hover:from-cyan-500 hover:to-primary hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/60"
@@ -23,7 +23,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
               Ver Projeto
-            </a>
+            </a> -->
           </div>
           <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
         </div>

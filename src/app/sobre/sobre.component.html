@@ -1,18 +1,52 @@
 <section id="sobre" class="bg-gradient-to-b from-gray-900 to-gray-800 text-zinc-100 py-20 fade-in-up">
   <div class="max-w-4xl mx-auto px-4 text-center">
-    <img src="image-about-me.jpeg" alt="Foto de perfil" class="mx-auto w-32 h-32 rounded-full border-4 border-zinc-700 mb-6 shadow-lg fade-in-up" style="animation-delay:0.2s">
+    <img src="image-about-me.jpeg" alt="Foto de perfil"
+      class="mx-auto w-32 h-32 rounded-full border-4 border-zinc-700 mb-6 shadow-lg fade-in-up"
+      style="animation-delay:0.2s">
     <h1 class="text-4xl font-bold mb-2 fade-in-up" style="animation-delay:0.3s">
       Olá, eu sou <span class="border-r-2 border-zinc-400 animate-pulse">{{ typedName$ | async }}</span>
     </h1>
     <p class="text-lg mb-4 fade-in-up" style="animation-delay:0.4s">{{ sobreParagraph }}</p>
     <div class="flex justify-center gap-4 mt-4 fade-in-up" style="animation-delay:0.5s">
       @for (link of sobreLinks; track link.href) {
-        <a [href]="link.href" [target]="link.target" [class]="link.class">
-          <ng-container [ngSwitch]="link.icon">
-            <svg *ngSwitchCase="'github'" class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.08.79 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
-            <svg *ngSwitchCase="'email'" class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20V8.99l8 6.99 8-6.99V20H4z"/></svg>
-          </ng-container>
-        </a>
+      <a [href]="link.href" [target]="link.target" [class]="link.class">
+        <ng-container [ngSwitch]="link.icon">
+          <svg *ngSwitchCase="'whatsapp'" class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 256 256">
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+              transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+              <path
+                d="M 3.188 90 c -0.791 0 -1.562 -0.313 -2.133 -0.891 c -0.754 -0.762 -1.044 -1.868 -0.761 -2.902 l 5.583 -20.384 c -3.491 -6.472 -5.333 -13.754 -5.34 -21.146 c 0 -0.019 0 -0.038 0 -0.057 C 0.546 20.017 20.571 0 45.175 0 C 57.109 0.005 68.322 4.653 76.75 13.086 c 8.428 8.436 13.066 19.647 13.063 31.57 c -0.011 24.605 -20.034 44.623 -44.637 44.623 c -7.056 -0.002 -14.036 -1.683 -20.283 -4.869 L 3.948 89.902 C 3.697 89.968 3.441 90 3.188 90 z M 25.26 78.213 c 0.498 0 0.992 0.124 1.436 0.366 c 5.636 3.073 12.02 4.698 18.462 4.7 c 21.313 0 38.646 -17.327 38.654 -38.625 c 0.004 -10.32 -4.012 -20.025 -11.307 -27.327 C 65.211 10.027 55.505 6.004 45.174 6 C 23.896 6 6.573 23.298 6.537 44.571 c 0 0.018 0 0.035 0 0.053 c -0.002 6.784 1.781 13.461 5.156 19.309 c 0.401 0.694 0.507 1.52 0.295 2.293 L 7.454 82.78 l 17.046 -4.47 C 24.75 78.245 25.005 78.213 25.26 78.213 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(212,212,216); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 34.769 27.22 c -0.779 -1.733 -1.6 -1.767 -2.341 -1.798 c -0.607 -0.026 -1.301 -0.024 -1.994 -0.024 c -0.694 0 -1.821 0.26 -2.774 1.301 c -0.954 1.041 -3.642 3.558 -3.642 8.676 c 0 5.119 3.729 10.065 4.248 10.76 c 0.52 0.694 7.198 11.534 17.771 15.703 c 8.789 3.466 10.577 2.776 12.485 2.603 c 1.907 -0.173 6.155 -2.516 7.022 -4.945 c 0.867 -2.429 0.867 -4.511 0.607 -4.946 c -0.26 -0.434 -0.954 -0.694 -1.994 -1.214 c -1.041 -0.52 -6.155 -3.037 -7.109 -3.385 c -0.954 -0.347 -1.648 -0.52 -2.341 0.522 c -0.694 1.04 -2.686 3.383 -3.293 4.077 c -0.607 0.695 -1.214 0.782 -2.254 0.262 c -1.041 -0.522 -4.392 -1.62 -8.367 -5.163 c -3.093 -2.758 -5.181 -6.163 -5.788 -7.205 c -0.607 -1.04 -0.065 -1.604 0.457 -2.123 c 0.467 -0.466 1.041 -1.215 1.561 -1.822 c 0.519 -0.608 0.692 -1.041 1.039 -1.735 c 0.347 -0.694 0.174 -1.302 -0.086 -1.822 C 37.715 34.422 35.693 29.277 34.769 27.22"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(212,212,216); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+          </svg>
+          <svg *ngSwitchCase="'linkedin'" class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 256 256">
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+              transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+              <path
+                d="M 1.48 29.91 h 18.657 v 60.01 H 1.48 V 29.91 z M 10.809 0.08 c 5.963 0 10.809 4.846 10.809 10.819 c 0 5.967 -4.846 10.813 -10.809 10.813 C 4.832 21.712 0 16.866 0 10.899 C 0 4.926 4.832 0.08 10.809 0.08"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #D4D4D8; fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 31.835 29.91 h 17.89 v 8.206 h 0.255 c 2.49 -4.72 8.576 -9.692 17.647 -9.692 C 86.514 28.424 90 40.849 90 57.007 V 89.92 H 71.357 V 60.737 c 0 -6.961 -0.121 -15.912 -9.692 -15.912 c -9.706 0 -11.187 7.587 -11.187 15.412 V 89.92 H 31.835 V 29.91 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #D4D4D8; fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+          </svg>
+          <svg *ngSwitchCase="'github'" class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.08.79 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z" />
+          </svg>
+          <svg *ngSwitchCase="'email'" class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20V8.99l8 6.99 8-6.99V20H4z" />
+          </svg>
+        </ng-container>
+      </a>
       }
     </div>
   </div>
